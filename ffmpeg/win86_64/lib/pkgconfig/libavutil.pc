@@ -9,6 +9,6 @@ Version: 59.8.100
 Requires: 
 Requires.private: 
 Conflicts:
-Libs: -L${libdir}  -lavutil -lva_win32 -lva -lm -luser32 -lva -lbcrypt -latomic
+Libs: -L${libdir}  -lavutil -lm -luser32 -lbcrypt -latomic
 Libs.private: 
 Cflags: -I${includedir}

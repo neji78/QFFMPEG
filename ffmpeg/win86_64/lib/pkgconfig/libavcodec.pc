@@ -9,6 +9,6 @@ Version: 61.3.100
 Requires: libavutil >= 59.8.100
 Requires.private: 
 Conflicts:
-Libs: -L${libdir}  -lavcodec -lm -latomic -lole32 -luser32
+Libs: -L${libdir}  -lavcodec -lm -latomic -lx264 -lole32 -luser32
 Libs.private: 
 Cflags: -I${includedir}
