@@ -18,6 +18,7 @@ HEADERS += \
     include/qmetadata.h \
     include/qvideostream.h
 INCLUDEPATH += $$PWD/3rdParty/include
+INCLUDEPATH += $$PWD/include
 
 win32 {
 
@@ -32,5 +33,13 @@ win32 {
     }
 }
 android{
-    LIBS += -L$$PWD/3rdParty/lib/android/aarch64-linux-android/ -lavformat -lavcodec -lavutil -lbcrypt -lz
+
+contains(QT_ARCH, armeabi-v7a) {
+    LIBS += -L$$PWD/3rdParty/lib/android/armeabi-v7a/ \
+            -lavformat -lavcodec -lavutil -lz
+} else: contains(QT_ARCH, arm64-v8a) {
+    LIBS += -L$$PWD/3rdParty/lib/android/aarch64-linux-android/ \
+            -lavformat -lavcodec -lavutil -lz
+}
+
 }
