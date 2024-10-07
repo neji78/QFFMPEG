@@ -1,0 +1,14 @@
+prefix=./android_build
+exec_prefix=${prefix}
+libdir=./android_build/lib
+includedir=./android_build/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 10.1.100
+Requires: 
+Requires.private: libavutil >= 59.8.100
+Conflicts:
+Libs: -L${libdir}  -lavfilter 
+Libs.private: -pthread -lm -latomic
+Cflags: -I${includedir}

@@ -1,5 +1,8 @@
 <RCC>
-    <qresource prefix="/music">
-        <file>music/01_eyes_closed.mp3</file>
+    <qresource prefix="/primary">
+        <file>media/avitest.avi</file>
+        <file>media/test.jpg</file>
+        <file>media/test.mp3</file>
+        <file>media/test.mp4</file>
     </qresource>
 </RCC>

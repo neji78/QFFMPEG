@@ -1,20 +1,36 @@
+SOURCES += \
+        qaudiodata.cpp \
+        qaudiostream.cpp \
+        qcodec.cpp \
+        qfflog.cpp \
+        qffmpeg.cpp \
+        qmetadata.cpp \
+        qvideostream.cpp
+
+
+HEADERS += \
+    qaudiodata.h \
+    qaudiostream.h \
+    qcodec.h \
+    qfflog.h \
+    qffmpeg.h \
+    qffmpegutility.h \
+    qmetadata.h \
+    qvideostream.h
+INCLUDEPATH += $$PWD/3rdParty/include
 
 win32 {
 
     ## Windows common build here
     !contains(QT_ARCH, x86_64) {
-#    INCLUDEPATH += $$PWD/x264/include
-#    LIBS += -L$$PWD/x264/lib/ -lx264
-INCLUDEPATH += $$PWD/win32/static/include
-LIBS += -L$$PWD/win32/static/lib/ -lavformat -lavcodec -lavutil -lbcrypt -lz
-#    INCLUDEPATH += $$PWD/win32/dynamic/include
-#    LIBS += -L$$PWD/win32/dynamic/lib/ -lavformat -lavutil
-#    LIBS += -L$$PWD/win86/lib/ -lavformat -lavutil -lavcodec -lavfilter -lx264
 
-
+        LIBS += -L$$PWD/3rdParty/lib/windows/x86/static/ -lavformat -lavcodec -lavutil -lbcrypt -lz
 
     } else {
 
 
     }
+}
+android{
+    LIBS += -L$$PWD/3rdParty/lib/android/aarch64-linux-android/ -lavformat -lavcodec -lavutil -lbcrypt -lz
 }

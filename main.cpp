@@ -3,8 +3,8 @@
 #include <QElapsedTimer>
 int main ()
 {
-    QElapsedTimer es;
-    es.start();
-    QFFMPEG ffmpeg("D:\\FFMPEG\\transformation\\flip\\flipVideo\\media\\avitest.avi");
+    auto path = "D:\\FFMPEG\\transformation\\flip\\qffmpeg\\media\\test.mp4";
+    QFFMPEG ffmpeg(path);
+    qDebug()<<__LINE__<<__PRETTY_FUNCTION__<<ffmpeg.getAudioStream();
     return 0;
 }
