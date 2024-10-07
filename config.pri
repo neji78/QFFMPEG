@@ -35,7 +35,7 @@ win32 {
 android{
 
 contains(QT_ARCH, armeabi-v7a) {
-    LIBS += -L$$PWD/3rdParty/lib/android/armeabi-v7a/ \
+    LIBS += -L$$PWD/3rdParty/lib/android/armv7a/ \
             -lavformat -lavcodec -lavutil -lz
 } else: contains(QT_ARCH, arm64-v8a) {
     LIBS += -L$$PWD/3rdParty/lib/android/aarch64-linux-android/ \
