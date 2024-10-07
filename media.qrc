@@ -1,8 +1,0 @@
-<RCC>
-    <qresource prefix="/primary">
-        <file>media/avitest.avi</file>
-        <file>media/test.jpg</file>
-        <file>media/test.mp3</file>
-        <file>media/test.mp4</file>
-    </qresource>
-</RCC>

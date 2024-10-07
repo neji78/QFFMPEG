@@ -7,7 +7,7 @@ extern "C"{
 #include <libavutil/log.h>
 }
 
-QFFMPEG::QFFMPEG(const QString &filePath, QObject *parent): QObject(parent),
+QFFMPEG::QFFMPEG(const QString &filePath):
     m_filePath(filePath)
 {
     QFFLog::registerLog();
@@ -68,7 +68,6 @@ void QFFMPEG::setMetaData(QMetaData metaData)
         return;
 
     m_metaData = metaData;
-    emit metaDataChanged(m_metaData);
 }
 
 QVideoStream QFFMPEG::getVideoStream() const
