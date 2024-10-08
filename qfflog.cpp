@@ -6,6 +6,7 @@ extern "C"{
 #include <libavutil/log.h>
 #include <libavutil/error.h>
 }
+
 // in one source file
 Q_LOGGING_CATEGORY(ffmpeg, "ffmpeg")
 void QFFLog::registerLog()

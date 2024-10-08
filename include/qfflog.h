@@ -3,6 +3,7 @@
 extern "C"{
 #include <libavutil/log.h>
 }
+#include <QFFmpeg_global.h>
 #include <QLoggingCategory>
 #include <QMetaEnum>
 // in a header

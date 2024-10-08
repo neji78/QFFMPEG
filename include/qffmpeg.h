@@ -2,12 +2,13 @@
 #define QFFMPEG_H
 
 #include "qmetadata.h"
+#include <QFFmpeg_global.h>
 #include <qaudiostream.h>
 #include <qvideostream.h>
 extern "C"{
 #include <libavutil/dict.h>
 }
-class QFFMPEG
+class QFFMPEG_EXPORT QFFMPEG
 {
 public:
     QFFMPEG(const QString& filePath);
